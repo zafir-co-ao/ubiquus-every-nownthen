@@ -26,15 +26,19 @@ WORKDIR /app
 
 # Copy project files
 COPY install_uv_tools.sh /app/
+COPY install_scripts_as_uv_tools.sh /app/
 COPY uv_tools.txt /app/
 COPY crontab /app/crontab
 COPY scripts /app/scripts/
 
 # Make scripts executable
-RUN chmod +x /app/install_uv_tools.sh
+RUN chmod +x /app/install_uv_tools.sh /app/install_scripts_as_uv_tools.sh
 
 # Install UV tools from Git repositories
 RUN /app/install_uv_tools.sh
+
+# Install UV tools from local scripts directory
+RUN /app/install_scripts_as_uv_tools.sh
 
 # Create log directory for cron
 RUN mkdir -p /var/log && touch /var/log/cron.log
