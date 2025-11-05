@@ -19,7 +19,7 @@
 # Add your scheduled scripts below:
 
 # Every fourth day of the month at 9:00 AM run vendus reports
-5 2 5 * * . /etc/environment; /root/.local/bin/vendus-reports --output /tmp --archive all >> /var/log/cron.log 2>&1
+15 14 5 * * . /etc/environment; /root/.local/bin/vendus-reports --output /tmp --archive all >> /var/log/cron.log 2>&1
 
 # Every day at 9:00 AM archive documents using AI
-5 2 * * * . /etc/environment; /root/.local/bin/agentic-archive >> /var/log/cron.log 2>&1
+15 14 * * * . /etc/environment; /root/.local/bin/agentic-archive >> /var/log/cron.log 2>&1
