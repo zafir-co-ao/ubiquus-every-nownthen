@@ -24,4 +24,4 @@
 # Every day at 9:00 AM archive documents using AI
 15 14 * * * . /etc/environment; /root/.local/bin/agentic-archive >> /var/log/cron.log 2>&1
 
-10 15 5 * * . /etc/environment; /root/.local/bin/process-monthly-sales --dry-run >> /var/log/cron.log 2>&1
+20 15 5 * * . /etc/environment; /root/.local/bin/process-monthly-sales --dry-run >> /var/log/cron.log 2>&1
