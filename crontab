@@ -13,7 +13,7 @@
 0 6 2 * * . /etc/environment; /root/.local/bin/vendus-reports --output /tmp --archive all >> /var/log/cron.log 2>&1
 
 # Every second day of the month at 6 AM run process monthly sales
-0 6 2 * * . /etc/environment; /root/.local/bin/process-monthly-sales >> /var/log/cron.log 2>&1
+# 0 6 2 * * . /etc/environment; /root/.local/bin/process-monthly-sales >> /var/log/cron.log 2>&1
 
 # Every day at 0:00 AM archive documents using AI
 0 0 * * * . /etc/environment; /root/.local/bin/agentic-archive >> /var/log/cron.log 2>&1
